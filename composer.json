@@ -1,0 +1,38 @@
+{
+  "name": "alex-patterson-webdev/entity",
+  "version" : "1.0.0",
+  "authors": [
+    {
+      "name": "Alex Patterson",
+      "email": "alex.patterson.webdev@gmail.com"
+    }
+  ],
+  "require" : {
+    "php" : "^7.2",
+    "alex-patterson-webdev/date-time" : "dev-master",
+    "alex-patterson-webdev/stdlib" : "dev-master"
+  },
+  "require-dev" : {
+    "phpunit/phpunit" : "^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Arp\\Entity\\" : "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ArpTest\\Entity\\" : "test/"
+    }
+  },
+  "repositories" : [
+    {
+      "type": "vcs",
+      "url": "/home/alexp/www/git/alex-patterson-webdev/date-time.git"
+    },
+    {
+      "type": "vcs",
+      "url": "/home/alexp/www/git/alex-patterson-webdev/stdlib.git"
+    }
+  ]
+}

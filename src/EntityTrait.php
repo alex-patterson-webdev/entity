@@ -50,7 +50,7 @@ trait EntityTrait
      *
      * @return boolean
      */
-    public function hasId()
+    public function hasId() : bool
     {
         return empty($this->id) ? false : true;
     }
@@ -64,19 +64,9 @@ trait EntityTrait
      *
      * @return boolean
      */
-    public function isId($id)
+    public function isId($id) : bool
     {
         return ($id === $this->id);
-    }
-
-    /**
-     * __toString
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->getId();
     }
 
 }

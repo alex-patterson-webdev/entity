@@ -4,7 +4,6 @@ namespace Arp\Entity;
 
 use Arp\DateTime\Entity\DateCreatedAwareTrait;
 use Arp\DateTime\Entity\DateUpdatedAwareTrait;
-use Doctrine\ORM\Mapping as ORM;
 
 /**
  * EntityHistoryTrait
@@ -24,7 +23,6 @@ trait EntityHistoryTrait
     /**
      * $dateCreated
      *
-     * @ORM\Column(name="date_created", type="datetime", nullable=true)
      * @var \DateTime|null
      */
     protected $dateCreated;
@@ -32,7 +30,6 @@ trait EntityHistoryTrait
     /**
      * $dateCreated
      *
-     * @ORM\Column(name="date_updated", type="datetime", nullable=true)
      * @var \DateTime|null
      */
     protected $dateUpdated;

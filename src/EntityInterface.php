@@ -37,7 +37,7 @@ interface EntityInterface
      *
      * @return boolean
      */
-    public function hasId();
+    public function hasId() : bool;
 
     /**
      * isId
@@ -48,5 +48,5 @@ interface EntityInterface
      *
      * @return boolean
      */
-    public function isId($id);
+    public function isId($id) : bool;
 }
