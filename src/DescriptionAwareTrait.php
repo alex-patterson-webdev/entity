@@ -15,14 +15,14 @@ trait DescriptionAwareTrait
      *
      * @var string
      */
-    protected $description = '';
+    protected $description;
 
     /**
      * hasDescription
      *
      * @return boolean
      */
-    public function hasDescription() : bool
+    public function hasDescription()
     {
         return empty($this->description) ? false : true;
     }
@@ -32,7 +32,7 @@ trait DescriptionAwareTrait
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -42,7 +42,7 @@ trait DescriptionAwareTrait
      *
      * @param string $description
      */
-    public function setDescription(string $description)
+    public function setDescription($description)
     {
         $this->description = $description;
     }

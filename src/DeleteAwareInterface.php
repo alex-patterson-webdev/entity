@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Arp\Entity;
 
 /**
@@ -15,13 +16,13 @@ interface DeleteAwareInterface
      *
      * @return boolean
      */
-    public function isDeleted() : bool;
+    public function isDeleted();
 
     /**
      * setDeleted
      *
      * @param boolean $deleted
      */
-    public function setDeleted(bool $deleted);
+    public function setDeleted($deleted);
 
 }

@@ -15,19 +15,19 @@ interface DescriptionAwareInterface
      *
      * @return boolean
      */
-    public function hasDescription() : bool ;
+    public function hasDescription();
 
     /**
      * getDescription
      *
      * @return string
      */
-    public function getDescription() : string ;
+    public function getDescription();
 
     /**
      * setDescription
      *
      * @param string $description
      */
-    public function setDescription(string $description);
+    public function setDescription($description);
 }

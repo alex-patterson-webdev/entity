@@ -1,4 +1,7 @@
-.idea/
 vendor/
-.phpunit.result.cache
-composer.phar
+config/*.local.php
+config/development.config.php
+data/cache/*
+data/upload/*
+!data/cache/.gitkeep
+.idea/
