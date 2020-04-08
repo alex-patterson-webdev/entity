@@ -1,28 +1,22 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Arp\Entity;
 
 /**
- * DeleteAwareInterface
- *
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
 interface DeleteAwareInterface
 {
     /**
-     * isDeleted
-     *
-     * @return boolean
+     * @return bool
      */
-    public function isDeleted();
+    public function isDeleted(): bool;
 
     /**
-     * setDeleted
-     *
-     * @param boolean $deleted
+     * @param bool $deleted
      */
-    public function setDeleted($deleted);
-
+    public function setDeleted(bool $deleted): void;
 }

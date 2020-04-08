@@ -6,7 +6,7 @@ namespace Arp\Entity;
 
 /**
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
- * @package Arp\DateTime\Entity
+ * @package Arp\Entity
  */
 class DateDeletedAwareTrait
 {

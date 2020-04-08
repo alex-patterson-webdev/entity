@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Arp\Entity;
 
 /**
@@ -58,8 +60,6 @@ trait EntityTrait
     }
 
     /**
-     * __toString
-     *
      * @return string
      */
     public function __toString()
