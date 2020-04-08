@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Arp\Entity\Exception;
 
 /**
- * EntityException
- *
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity\Exception
  */
-class EntityException extends \RuntimeException implements EntityExceptionInterface
-{}
+class EntityException extends \Exception
+{
+
+}
