@@ -1,5 +1,6 @@
 {
   "name": "alex-patterson-webdev/entity",
+  "description": "Shared library of domain objects, traits and interfaces",
   "version": "1.0.0",
   "minimum-stability": "dev",
   "prefer-stable": true,
