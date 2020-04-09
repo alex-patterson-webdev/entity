@@ -8,8 +8,7 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-trait EntityHistoryTrait
+interface DateTimeAwareInterface extends DateCreatedAwareInterface, DateUpdatedAwareInterface
 {
-    use DateCreatedAwareTrait;
-    use DateUpdatedAwareTrait;
+
 }
