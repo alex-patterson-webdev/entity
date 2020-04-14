@@ -13,16 +13,16 @@ namespace Arp\Entity;
 trait EntityTrait
 {
     /**
-     * @var string
+     * @var string|null
      */
     protected $id;
 
     /**
      * Return the entity's identity.
      *
-     * @return string
+     * @return string|null
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -30,9 +30,9 @@ trait EntityTrait
     /**
      * Set the entity's identity.
      *
-     * @param string $id The identity that should be set.
+     * @param string|null $id The identity that should be set.
      */
-    public function setId(string $id): void
+    public function setId(?string $id): void
     {
         $this->id = $id;
     }
@@ -44,7 +44,7 @@ trait EntityTrait
      */
     public function hasId(): bool
     {
-        return empty($this->id) ? false : true;
+        return isset($this->id) ? false : true;
     }
 
     /**
