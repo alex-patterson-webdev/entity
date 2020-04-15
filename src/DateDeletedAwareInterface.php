@@ -8,7 +8,7 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-interface DateDeletedAwareInterface
+interface DateDeletedAwareInterface extends EntityInterface
 {
     /**
      * Check if the deleted date has been set.
