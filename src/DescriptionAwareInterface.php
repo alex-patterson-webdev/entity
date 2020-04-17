@@ -23,5 +23,5 @@ interface DescriptionAwareInterface extends EntityInterface
     /**
      * @param string $description
      */
-    public function setDescription($description): void;
+    public function setDescription(string $description): void;
 }
