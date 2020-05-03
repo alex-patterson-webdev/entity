@@ -15,18 +15,18 @@ interface EntityInterface
     /**
      * Return the entity's identity.
      *
-     * @return string
+     * @return string|null
      */
-    public function getId(): string;
+    public function getId(): ?string;
 
     /**
      * Set the entity's identity.
      *
-     * @param string $id The identity that should be set
+     * @param string|null $id The identity that should be set
      *
      * @return void
      */
-    public function setId(string $id): void;
+    public function setId(?string $id): void;
 
     /**
      * Check if the identity has been set.

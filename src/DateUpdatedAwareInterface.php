@@ -8,7 +8,7 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-interface DateUpdatedAwareInterface
+interface DateUpdatedAwareInterface extends EntityInterface
 {
     /**
      * Check if the updated date has been set.

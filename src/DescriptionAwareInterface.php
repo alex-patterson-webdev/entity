@@ -8,7 +8,7 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-interface DescriptionAwareInterface
+interface DescriptionAwareInterface extends EntityInterface
 {
     /**
      * @return boolean
@@ -23,5 +23,5 @@ interface DescriptionAwareInterface
     /**
      * @param string $description
      */
-    public function setDescription($description): void;
+    public function setDescription(string $description): void;
 }

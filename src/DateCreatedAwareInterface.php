@@ -8,7 +8,7 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-interface DateCreatedAwareInterface
+interface DateCreatedAwareInterface extends EntityInterface
 {
     /**
      * Check if the created date has been defined.
