@@ -3,7 +3,6 @@
   "description": "Shared library of domain objects, traits and interfaces",
   "version": "1.0.0",
   "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Alex Patterson",
@@ -28,7 +27,7 @@
     }
   },
   "scripts": {
-    "test": "phpunit --coverage-clover=coverage.xml"
+    "test": "php vendor/bin/phpunit --coverage-clover=coverage.xml"
   },
   "config": {
     "preferred-install": "dist",
