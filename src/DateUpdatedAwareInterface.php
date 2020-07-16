@@ -20,14 +20,14 @@ interface DateUpdatedAwareInterface extends EntityInterface
     /**
      * Return the updated date.
      *
-     * @return \DateTime|null
+     * @return \DateTimeInterface|null
      */
-    public function getDateUpdated(): ?\DateTime;
+    public function getDateUpdated(): ?\DateTimeInterface;
 
     /**
      * Set the updated date.
      *
-     * @param \DateTime|null $dateTime
+     * @param \DateTimeInterface|null $dateTime
      */
-    public function setDateUpdated(?\DateTime $dateTime): void;
+    public function setDateUpdated(?\DateTimeInterface $dateTime): void;
 }

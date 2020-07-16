@@ -13,7 +13,7 @@ trait DescriptionAwareTrait
     /**
      * @var string
      */
-    protected $description = '';
+    protected string $description = '';
 
     /**
      * @return boolean

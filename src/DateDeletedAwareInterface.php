@@ -22,12 +22,12 @@ interface DateDeletedAwareInterface extends EntityInterface
      *
      * @return \DateTime|null
      */
-    public function getDateDeleted(): ?\DateTime;
+    public function getDateDeleted(): ?\DateTimeInterface;
 
     /**
      * Set the deleted date.
      *
-     * @param \DateTime|null $dateTime
+     * @param \DateTimeInterface|null $dateTime
      */
-    public function setDateDeleted(?\DateTime $dateTime): void;
+    public function setDateDeleted(?\DateTimeInterface $dateTime): void;
 }
