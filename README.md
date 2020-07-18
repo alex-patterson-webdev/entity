@@ -6,7 +6,7 @@
 
 ## About
 
-Shared library of domain objects, traits and interfaces
+Shared library of domain objects traits and interfaces.
 
 ## Installation
 

@@ -3,6 +3,7 @@
   "description": "Shared library of domain objects, traits and interfaces",
   "version": "1.0.0",
   "minimum-stability": "stable",
+  "license": "MIT",
   "authors": [
     {
       "name": "Alex Patterson",
