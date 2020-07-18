@@ -9,7 +9,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers EntityTrait
+ * @covers \Arp\Entity\EntityTrait
  *
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package ArpTest\Entity
@@ -28,20 +28,10 @@ final class EntityTraitTest extends TestCase
     }
 
     /**
-     * Assert that the identity is not set by default.
-     */
-    public function testGetIdWillReturnNullByDefault(): void
-    {
-        $this->assertNull($this->entityTrait->getId());
-    }
-
-    /**
      * Assert that we can set and get the id using setId() and getId().
      */
     public function testGetSetId(): void
     {
-        $this->assertNull($this->entityTrait->getId());
-
         $id = 'A';
         $this->entityTrait->setId($id);
 
