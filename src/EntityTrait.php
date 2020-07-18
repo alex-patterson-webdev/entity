@@ -44,7 +44,7 @@ trait EntityTrait
      */
     public function hasId(): bool
     {
-        return isset($this->id);
+        return !empty($this->id);
     }
 
     /**

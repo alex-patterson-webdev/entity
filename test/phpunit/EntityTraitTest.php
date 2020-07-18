@@ -9,7 +9,7 @@ use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Arp\Entity\EntityTrait
+ * @covers  \Arp\Entity\EntityTrait
  *
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package ArpTest\Entity
@@ -55,5 +55,40 @@ final class EntityTraitTest extends TestCase
         $this->entityTrait->setId($id);
 
         $this->assertTrue($this->entityTrait->hasId());
+    }
+
+    /**
+     * Assert that calls to isId() will return the correct boolean value.
+     *
+     * @param string  $id
+     * @param string  $testId
+     * @param boolean $expected
+     *
+     * @dataProvider getIsIdData
+     */
+    public function testIsId(string $id, string $testId, bool $expected): void
+    {
+        $this->entityTrait->setId($id);
+
+        $result = $this->entityTrait->isId($testId);
+        if ($expected) {
+            $this->assertTrue($result);
+        } else {
+            $this->assertFalse($result);
+        }
+    }
+
+    /**
+     * @return array|array[]
+     */
+    public function getIsIdData(): array
+    {
+        return [
+            ['', '', true],
+            ['ABC', 'ABC', true],
+            ['', 'ABC', false],
+            ['HELLO', 'TEST', false],
+            ['TEST123', 'TEST123', true],
+        ];
     }
 }
