@@ -8,8 +8,10 @@ namespace Arp\Entity;
  * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
  * @package Arp\Entity
  */
-trait DateTimeAwareTrait
+interface NameAwareInterface
 {
-    use DateCreatedAwareTrait;
-    use DateUpdatedAwareTrait;
+    /**
+     * @return string
+     */
+    public function getName(): string;
 }

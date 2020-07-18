@@ -15,7 +15,7 @@ trait EntityTrait
     /**
      * @var string|null
      */
-    protected $id;
+    protected ?string $id = null;
 
     /**
      * Return the entity's identity.
@@ -44,7 +44,7 @@ trait EntityTrait
      */
     public function hasId(): bool
     {
-        return isset($this->id);
+        return !empty($this->id);
     }
 
     /**
@@ -57,13 +57,5 @@ trait EntityTrait
     public function isId(string $id): bool
     {
         return ($id === $this->id);
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return $this->getId();
     }
 }

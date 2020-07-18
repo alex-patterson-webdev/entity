@@ -11,9 +11,9 @@ namespace Arp\Entity;
 trait DateDeletedAwareTrait
 {
     /**
-     * @var \DateTime|null
+     * @var \DateTimeInterface|null
      */
-    protected $dateDeleted;
+    protected ?\DateTimeInterface $dateDeleted;
 
     /**
      * Check if the deleted date has been set.
@@ -28,9 +28,9 @@ trait DateDeletedAwareTrait
     /**
      * Return the deleted date.
      *
-     * @return \DateTime|null
+     * @return \DateTimeInterface|null
      */
-    public function getDateDeleted(): ?\DateTime
+    public function getDateDeleted(): ?\DateTimeInterface
     {
         return $this->dateDeleted;
     }
@@ -38,9 +38,9 @@ trait DateDeletedAwareTrait
     /**
      * Set the deleted date.
      *
-     * @param \DateTime|null $dateTime
+     * @param \DateTimeInterface|null $dateTime
      */
-    public function setDateDeleted(?\DateTime $dateTime): void
+    public function setDateDeleted(?\DateTimeInterface $dateTime): void
     {
         $this->dateDeleted = $dateTime;
     }
