@@ -15,7 +15,7 @@ trait EntityTrait
     /**
      * @var string|null
      */
-    protected ?string $id;
+    protected ?string $id = null;
 
     /**
      * Return the entity's identity.

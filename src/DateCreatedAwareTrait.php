@@ -13,7 +13,7 @@ trait DateCreatedAwareTrait
     /**
      * @var \DateTimeInterface|null
      */
-    protected ?\DateTimeInterface $dateCreated;
+    protected ?\DateTimeInterface $dateCreated = null;
 
     /**
      * Check if the created date has been defined.
