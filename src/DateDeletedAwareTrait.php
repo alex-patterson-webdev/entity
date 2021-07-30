@@ -13,7 +13,7 @@ trait DateDeletedAwareTrait
     /**
      * @var \DateTimeInterface|null
      */
-    protected ?\DateTimeInterface $dateDeleted;
+    protected ?\DateTimeInterface $dateDeleted = null;
 
     /**
      * Check if the deleted date has been set.
