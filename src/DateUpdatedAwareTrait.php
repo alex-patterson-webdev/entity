@@ -13,7 +13,7 @@ trait DateUpdatedAwareTrait
     /**
      * @var \DateTimeInterface|null
      */
-    protected ?\DateTimeInterface $dateUpdated;
+    protected ?\DateTimeInterface $dateUpdated = null;
 
     /**
      * Check if the updated date has been set.
@@ -40,7 +40,7 @@ trait DateUpdatedAwareTrait
      *
      * @param \DateTimeInterface|null $dateTime
      */
-    public function setDateUpdated(\DateTimeInterface $dateTime = null): void
+    public function setDateUpdated(?\DateTimeInterface $dateTime): void
     {
         $this->dateUpdated = $dateTime;
     }

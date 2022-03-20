@@ -6,10 +6,10 @@
 
 ## About
 
-Shared library of domain objects traits and interfaces.
+Shared library of domain object traits and interfaces.
 
 ## Installation
 
 Installation via [composer](https://getcomposer.org).
 
-    require alex-patterson-webdev/entity ^1
+    require alex-patterson-webdev/entity ^2.0.0

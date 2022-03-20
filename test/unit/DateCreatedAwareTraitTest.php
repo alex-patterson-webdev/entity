@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace ArpTest\Entity;
 
-use Arp\Entity\DateCreatedAwareTrait;
-use PHPUnit\Framework\MockObject\MockObject;
+use ArpTest\Entity\Double\DateCreatedAwareFake;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -17,16 +16,13 @@ use PHPUnit\Framework\TestCase;
 final class DateCreatedAwareTraitTest extends TestCase
 {
     /**
-     * @var DateCreatedAwareTrait|MockObject
+     * @var DateCreatedAwareFake
      */
-    private $dateCreatedAwareTrait;
+    private DateCreatedAwareFake $dateCreatedAwareTrait;
 
-    /**
-     * Prepare the test case dependencies.
-     */
     public function setUp(): void
     {
-        $this->dateCreatedAwareTrait = $this->getMockForTrait(DateCreatedAwareTrait::class);
+        $this->dateCreatedAwareTrait = new DateCreatedAwareFake();
     }
 
     /**
@@ -56,9 +52,7 @@ final class DateCreatedAwareTraitTest extends TestCase
      */
     public function testHasDateCreatedWillReturnTrueWhenDateIsSet(): void
     {
-        $createdDate = new \DateTime();
-
-        $this->dateCreatedAwareTrait->setDateCreated($createdDate);
+        $this->dateCreatedAwareTrait->setDateCreated(new \DateTime());
 
         $this->assertTrue($this->dateCreatedAwareTrait->hasDateCreated());
     }

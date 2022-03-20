@@ -10,5 +10,4 @@ namespace Arp\Entity;
  */
 interface DeleteHistoryAwareInterface extends DeleteAwareInterface, DateDeletedAwareInterface
 {
-
 }

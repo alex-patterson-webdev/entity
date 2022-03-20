@@ -13,5 +13,4 @@ namespace Arp\Entity;
  */
 interface AggregateEntityInterface extends EntityInterface
 {
-
 }

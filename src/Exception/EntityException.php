@@ -10,5 +10,4 @@ namespace Arp\Entity\Exception;
  */
 class EntityException extends \Exception
 {
-
 }
