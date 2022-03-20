@@ -16,11 +16,11 @@ trait DescriptionAwareTrait
     protected string $description = '';
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function hasDescription(): bool
     {
-        return empty($this->description) ? false : true;
+        return !empty($this->description);
     }
 
     /**
