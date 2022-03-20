@@ -10,5 +10,4 @@ namespace Arp\Entity;
  */
 interface DateTimeAwareInterface extends DateCreatedAwareInterface, DateUpdatedAwareInterface
 {
-
 }

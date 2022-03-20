@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace ArpTest\Entity;
 
-use Arp\Entity\EntityTrait;
-use PHPUnit\Framework\MockObject\MockObject;
+use ArpTest\Entity\Double\EntityFake;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -16,49 +15,45 @@ use PHPUnit\Framework\TestCase;
  */
 final class EntityTraitTest extends TestCase
 {
-    /** @var EntityTrait|MockObject */
-    private $entityTrait;
+    private EntityFake $entity;
 
-    /**
-     * Set up the test dependencies.
-     */
     public function setUp(): void
     {
-        $this->entityTrait = $this->getMockForTrait(EntityTrait::class);
+        $this->entity = new EntityFake();
     }
 
     /**
-     * Assert that we can set and get the id using setId() and getId().
+     * Assert that we can set and get the id using setId() and getId()
      */
     public function testGetSetId(): void
     {
         $id = 'A';
-        $this->entityTrait->setId($id);
+        $this->entity->setId($id);
 
-        $this->assertSame($id, $this->entityTrait->getId());
+        $this->assertSame($id, $this->entity->getId());
     }
 
     /**
-     * Assert that when calling hasId() without any id set, boolean FALSE is returned.
+     * Assert that when calling hasId() without any id set, boolean FALSE is returned
      */
     public function testHasIdWillReturnFalseByDefault(): void
     {
-        $this->assertFalse($this->entityTrait->hasId());
+        $this->assertFalse($this->entity->hasId());
     }
 
     /**
-     * Assert that when the id is set that calls to hasId() will return boolean TRUE.
+     * Assert that when the id is set that calls to hasId() will return boolean TRUE
      */
     public function testHasIdWillReturnTrueWhenIdIsNotNull(): void
     {
         $id = 'ABC';
-        $this->entityTrait->setId($id);
+        $this->entity->setId($id);
 
-        $this->assertTrue($this->entityTrait->hasId());
+        $this->assertTrue($this->entity->hasId());
     }
 
     /**
-     * Assert that calls to isId() will return the correct boolean value.
+     * Assert that calls to isId() will return the correct boolean value
      *
      * @param string  $id
      * @param string  $testId
@@ -68,9 +63,10 @@ final class EntityTraitTest extends TestCase
      */
     public function testIsId(string $id, string $testId, bool $expected): void
     {
-        $this->entityTrait->setId($id);
+        $this->entity->setId($id);
 
-        $result = $this->entityTrait->isId($testId);
+        $result = $this->entity->isId($testId);
+
         if ($expected) {
             $this->assertTrue($result);
         } else {
@@ -79,7 +75,7 @@ final class EntityTraitTest extends TestCase
     }
 
     /**
-     * @return array|array[]
+     * @return array<mixed>
      */
     public function getIsIdData(): array
     {
