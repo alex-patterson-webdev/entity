@@ -1,4 +1,4 @@
-![github workflow](https://github.com/alex-patterson-webdev/laminas-entity/actions/workflows/workflow.yml/badge.svg)
+![github workflow](https://github.com/alex-patterson-webdev/entity/actions/workflows/workflow.yml/badge.svg)
 [![codecov](https://codecov.io/gh/alex-patterson-webdev/entity/branch/master/graph/badge.svg)](https://codecov.io/gh/alex-patterson-webdev/entity)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alex-patterson-webdev/entity/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alex-patterson-webdev/entity/?branch=master)
 
