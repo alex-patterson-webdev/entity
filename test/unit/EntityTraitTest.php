@@ -8,10 +8,7 @@ use ArpTest\Entity\Double\EntityFake;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers  \Arp\Entity\EntityTrait
- *
- * @author  Alex Patterson <alex.patterson.webdev@gmail.com>
- * @package ArpTest\Entity
+ * @covers \Arp\Entity\EntityTrait
  */
 final class EntityTraitTest extends TestCase
 {
@@ -27,7 +24,7 @@ final class EntityTraitTest extends TestCase
      */
     public function testGetSetId(): void
     {
-        $id = 'A';
+        $id = 123;
         $this->entity->setId($id);
 
         $this->assertSame($id, $this->entity->getId());
@@ -46,7 +43,7 @@ final class EntityTraitTest extends TestCase
      */
     public function testHasIdWillReturnTrueWhenIdIsNotNull(): void
     {
-        $id = 'ABC';
+        $id = 123;
         $this->entity->setId($id);
 
         $this->assertTrue($this->entity->hasId());
@@ -55,13 +52,9 @@ final class EntityTraitTest extends TestCase
     /**
      * Assert that calls to isId() will return the correct boolean value
      *
-     * @param string  $id
-     * @param string  $testId
-     * @param boolean $expected
-     *
      * @dataProvider getIsIdData
      */
-    public function testIsId(string $id, string $testId, bool $expected): void
+    public function testIsId(int $id, int $testId, bool $expected): void
     {
         $this->entity->setId($id);
 
@@ -80,11 +73,11 @@ final class EntityTraitTest extends TestCase
     public function getIsIdData(): array
     {
         return [
-            ['', '', true],
-            ['ABC', 'ABC', true],
-            ['', 'ABC', false],
-            ['HELLO', 'TEST', false],
-            ['TEST123', 'TEST123', true],
+            [123, 123, true],
+            [456, 456, true],
+            [123, 10, false],
+            [999, 901, false],
+            [12345, 12345, true],
         ];
     }
 }
