@@ -12,4 +12,4 @@ Shared library of domain object traits and interfaces.
 
 Installation via [composer](https://getcomposer.org).
 
-    require alex-patterson-webdev/entity ^2.0.0
+    require alex-patterson-webdev/entity ^3
